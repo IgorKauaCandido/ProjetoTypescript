@@ -1,0 +1,78 @@
+/* Define a altura e a largura do body e html, e centraliza o conteúdo */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Cor de fundo */
+}
+
+/* Estilo para o container de login */
+.login-container {
+    background-color: #fff; /* Cor de fundo do container */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Centraliza o texto */
+    max-width: 400px; /* Largura máxima do container */
+    width: 100%; /* Largura total disponível */
+    opacity: 0; /* Começa invisível para animação */
+    transform: translateY(-50px); /* Move o container para cima */
+    animation: fadeIn 1s forwards; /* Animação de fade-in */
+}
+
+/* Estilo do título */
+.login-container h1 {
+    margin-bottom: 30px; /* Margem abaixo do título */
+    font-size: 24px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo dos inputs */
+input[type="text"], input[type="password"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem vertical */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Cantos arredondados */
+    box-sizing: border-box; /* Inclui bordas e padding na largura total */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão de login */
+button {
+    background-color: #28a745; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 10px; /* Margem acima */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    width: 100%; /* Largura total */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+button:hover {
+    background-color: #218838; /* Cor do botão ao passar o mouse */
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de pressionar */
+}
+
+/* Estilo da mensagem de erro */
+#error-message {
+    margin-top: 10px; /* Margem acima */
+    color: red; /* Cor do texto */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Finaliza visível */
+        transform: translateY(0); /* Volta à posição original */
+    }
+}

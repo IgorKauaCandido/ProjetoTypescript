@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RC Gás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>RC Gás  Sistema de Gerenciamento</h1>
+        <form id="loginForm">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required><br>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required><br>
+
+            <button type="button" onclick="login()">Entrar</button>
+        </form>
+        <div id="error-message" style="color:red;"></div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "Sabrina" && password === "9258" ) {
+                window.location.href = "gerenciamento.html";
+                
+            } else {
+                document.getElementById('error-message').innerText = "Usuário ou senha incorretos.";
+            }
+        }
+    </script>
+</body>
+</html>
